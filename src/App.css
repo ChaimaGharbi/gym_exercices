@@ -48,6 +48,14 @@ body {
   flex-wrap: wrap;
 }
 
+.exercise-card .css-7n2y5n-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: #ffa9a9;
+}
+
+.exercise-card .css-4u74mt-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: #fcc757
+}
+
 .detail-image {
   width: 729px;
   height: 742px;
@@ -82,14 +90,14 @@ body {
   height: 326px;
 }
 
-.bodyPart-card {
+.bodyPart-card div {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
 }
 
 .exercise-card:hover,
-.bodyPart-card:hover {
-  transform: scale(1.1, 1.1);
+.bodyPart-card:hover div {
+  transform: scale(1.2, 1.2);
 }
 
 .search-btn:hover {

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { exercisesOptions, fetchData } from "../utils/fetchData";
-import HorizontalScrollbar from './HorizontalScrollbar'
+import HorizontalScrollbar from "./HorizontalScrollbar";
 
-
-const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
+const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState("");
 
   const [bodyParts, setBodyParts] = useState([]);
@@ -36,6 +35,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
       );
       setSearch("");
       setExercises(searchedExercises);
+      window.scrollTo({top: 1800, behavior: 'smooth'});
     }
   };
 
@@ -88,8 +88,13 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
           Search
         </Button>
       </Box>
-      <Box sx={{ position: 'relative', width: '100%', p:'20px'}}>
-          <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart}></HorizontalScrollbar>
+      <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
+        <HorizontalScrollbar
+          data={bodyParts}
+          bodyPart={bodyPart}
+          setBodyPart={setBodyPart}
+          isBodyPart
+        ></HorizontalScrollbar>
       </Box>
     </Stack>
   );
